@@ -16,6 +16,10 @@ In one simple line of code, your entire application will be set to your new beau
 [MAThemeKit setupThemeWithPrimaryColor:[MAThemeKit colorWithR:0 G:184 B:156] secondaryColor:[UIColor whiteColor] fontName:@"HelveticaNeue-Light" lightStatusBar:YES];
 ```
 
+![demo](Screenshots/screenshot1.png)
+![demo](Screenshots/screenshot2.png)
+
+
 There are two convenience methods provided by MAThemeKit to create UIColor objects from the RGB values or hex strings, for quick and easy creation of color information you might get from photoshop's color picker.
 
 ```js
@@ -25,10 +29,6 @@ UIColor *colorWithRGB = [MAThemeKit colorWithR:0 G:184 B:156]
 // Use the normal hex string representing the color
 UIColor *colorWithHex = [MAThemeKit colorWithHexString:@"00b89c"];
 ```
-
-
-![demo](Screenshots/screenshot1.png)
-![demo](Screenshots/screenshot2.png)
 
 
 Community
