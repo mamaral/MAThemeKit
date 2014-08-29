@@ -13,7 +13,7 @@ In one simple line of code, your entire application will be set to your new beau
 
 
 ```js
-    [MAThemeKit setupThemeWithPrimaryColor:[MAThemeKit colorWithR:0 G:184 B:156] secondaryColor:[UIColor whiteColor] fontName:@"HelveticaNeue-Light" lightStatusBar:YES];
+[MAThemeKit setupThemeWithPrimaryColor:[MAThemeKit colorWithR:0 G:184 B:156] secondaryColor:[UIColor whiteColor] fontName:@"HelveticaNeue-Light" lightStatusBar:YES];
 ```
 
 There are two convenience methods provided by MAThemeKit to create UIColor objects from the RGB values or hex strings, for quick and easy creation of color information you might get from photoshop's color picker.
@@ -34,7 +34,7 @@ UIColor *colorWithHex = [MAThemeKit colorWithHexString:@"00b89c"];
 Community
 =====
 
-Questions, comments, issues, and pull requests welcomed!! Thanks to Whelton for the Cocoapods integration, and thanks to jverdi's awesome project (https://github.com/jverdi/JVFloatLabeledTextField) for inspiration on the animated placeholders.
+Questions, comments, issues, and pull requests welcomed!!
 
 License
 =====
