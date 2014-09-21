@@ -17,7 +17,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
 
     [MAThemeKit setupThemeWithPrimaryColor:[MAThemeKit colorWithR:0 G:184 B:156] secondaryColor:[UIColor whiteColor] fontName:@"HelveticaNeue-Light" lightStatusBar:YES];
-    [MAThemeKit colorWithHexString:@"00b89c"];
     MainViewController *mainVC = [MainViewController new];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainVC];
     mainVC.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:0];
