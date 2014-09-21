@@ -19,6 +19,7 @@ static CGFloat const kDefaultTabBarFontSize = 14;
     }
     
     [self customizeNavigationBarColor:primaryColor textColor:secondaryColor fontName:fontName fontSize:kDefaultNavigationBarFontSize buttonColor:secondaryColor];
+    [self customizeNavigationBarButtonColor:secondaryColor];
     [self customizeTabBarColor:primaryColor textColor:secondaryColor fontName:fontName fontSize:kDefaultTabBarFontSize];
     [self customizeSwitchOnColor:primaryColor];
     [self customizeSearchBarColor:primaryColor buttonTintColor:secondaryColor];
@@ -50,6 +51,13 @@ static CGFloat const kDefaultTabBarFontSize = 14;
                                                                NSFontAttributeName: font
                                                                }];
     }
+}
+
+
+#pragma mark - UIBarButtonItem
+
++ (void)customizeNavigationBarButtonColor:(UIColor *)buttonColor {
+    [[UIButton appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleColor:buttonColor forState:UIControlStateNormal];
 }
 
 

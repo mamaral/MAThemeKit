@@ -30,6 +30,11 @@ https://gist.github.com/mattt/5135521
 + (void)customizeNavigationBarColor:(UIColor *)barColor textColor:(UIColor *)textColor fontName:(NSString *)fontName fontSize:(CGFloat)fontSize buttonColor:(UIColor *)buttonColor;
 
 
+#pragma mark - UIBarButtonItem
+
++ (void)customizeNavigationBarButtonColor:(UIColor *)buttonColor;
+
+
 #pragma mark - UITabBar
 
 + (void)customizeTabBarColor:(UIColor *)barColor textColor:(UIColor *)textColor;
