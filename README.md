@@ -7,6 +7,15 @@ MAThemeKit provides iOS developers the ability to create a coherent color theme 
 Usage
 =====
 
+The easiest way to incorporate MAThemeKit into your project is using CocoaPods. Add the following to your podfile and run `pod install`:
+
+```
+pod 'MAThemeKit', :git => 'https://github.com/mamaral/MAThemeKit'
+```
+
+Manual
+=====
+
 Drop the MAThemeKit.h/m files into your project, import the header into your AppDelegate.m file, and in the application:didFinishLaunchingWithOptions: method tell MAThemeKit what you'd like your primary and secondary theme colors to be, what you want for a font for your applications Navigation/TabBar's and if you'd like the status bar to be light or not. (NOTE - you'll still need to manually add the 'View controller-based status bar appearance' key to your Info.plist and set it to NO for the status bar to be set to light content.)
 
 In one simple line of code, your entire application will be set to your new beautiful theme!
