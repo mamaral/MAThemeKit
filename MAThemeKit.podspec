@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "MAThemeKit"
   s.version      = "1.0"
-  s.summary      = "MAThemeKit provides iOS developers the ability to create a coherent color theme throughout their entire application using a single line of code."
+  s.summary      = "MAThemeKit provides a coherent color theme throughout an entire app using a single line of code."
   s.homepage     = "https://github.com/mamaral/MAThemeKit"
   s.license      = "MIT"
   s.author       = { "Mike Amaral" => "mike.amaral36@gmail.com" }
