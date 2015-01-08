@@ -29,6 +29,8 @@ static CGFloat const kDefaultTabBarFontSize = 14;
     [self customizeSliderColor:primaryColor];
     [self customizePageControlCurrentPageColor:primaryColor];
     [self customizeToolbarTintColor:primaryColor];
+    [self customizeLabelColor:primaryColor fontName:fontName fontSize:kDefaultNavigationBarFontSize];
+    [self customizeBarButtonItemColor:secondaryColor fontName:fontName fontSize:kDefaultNavigationBarFontSize];
 }
 
 
@@ -136,6 +138,34 @@ static CGFloat const kDefaultTabBarFontSize = 14;
     [[UIPageControl appearance] setPageIndicatorTintColor:[UIColor lightGrayColor]];
     [[UIPageControl appearance] setCurrentPageIndicatorTintColor:mainColor];
     [[UIPageControl appearance] setBackgroundColor:[UIColor clearColor]];
+}
+
+#pragma mark - UILabel
+
++ (void)customizeLabelColor:(UIColor *)textColor fontName:(NSString *)fontName fontSize:(CGFloat)fontSize
+{
+    [[UILabel appearance] setTextColor:textColor];
+    
+    UIFont *font = [UIFont fontWithName:fontName size:fontSize];
+    if (font) { [[UILabel appearance] setFont:font]; }
+}
+
+#pragma mark - UITableView
+
++ (void)customizeTableViewColor:(UIColor *)mainColor secondaryColor:(UIColor *)secondaryColor
+{
+    [[UITableView appearance] setTintColor:mainColor];
+    [[UITableView appearance] setSeparatorColor:secondaryColor];
+}
+
+
+#pragma mark - UIBarButtonItem
+
++ (void)customizeBarButtonItemColor:(UIColor *)mainColor fontName:(NSString *)fontName fontSize:(CGFloat)fontSize
+{
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont fontWithName:fontName size:fontSize],
+                                                           NSForegroundColorAttributeName:mainColor
+                                                           } forState:UIControlStateNormal];
 }
 
 

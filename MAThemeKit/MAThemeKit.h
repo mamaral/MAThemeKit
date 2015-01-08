@@ -80,6 +80,17 @@ https://gist.github.com/mattt/5135521
 
 + (void)customizePageControlCurrentPageColor:(UIColor *)mainColor;
 
+#pragma mark - UILabel
+
++ (void)customizeLabelColor:(UIColor *)textColor fontName:(NSString *)fontName fontSize:(CGFloat)fontSize;
+
+#pragma mark - UITableView
+
++ (void)customizeTableViewColor:(UIColor *)mainColor secondaryColor:(UIColor *)secondaryColor;
+
+#pragma mark - UIBarButtonItem
+
++ (void)customizeBarButtonItemColor:(UIColor *)mainColor fontName:(NSString *)fontName fontSize:(CGFloat)fontSize;
 
 #pragma mark - Color utilities
 
