@@ -73,7 +73,9 @@ https://gist.github.com/mattt/5135521
 
 #pragma mark - UIToolbar
 
++ (void)customizeToolbarTintColor:(UIColor *)tintColor barTintColor:(UIColor *)barTintColor;
 + (void)customizeToolbarTintColor:(UIColor *)tintColor;
++ (void)customizeToolbarBarTintColor:(UIColor *)barTintColor;
 
 
 #pragma mark - UIPageControl

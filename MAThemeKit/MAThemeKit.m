@@ -28,7 +28,7 @@ static CGFloat const kDefaultTabBarFontSize = 14;
     [self customizeSegmentedControlWithMainColor:primaryColor secondaryColor:secondaryColor];
     [self customizeSliderColor:primaryColor];
     [self customizePageControlCurrentPageColor:primaryColor];
-    [self customizeToolbarTintColor:primaryColor];
+    [self customizeToolbarTintColor:secondaryColor barTintColor:primaryColor];
     [self customizeLabelColor:primaryColor fontName:fontName fontSize:kDefaultNavigationBarFontSize];
     [self customizeBarButtonItemColor:secondaryColor fontName:fontName fontSize:kDefaultNavigationBarFontSize];
 }
@@ -129,8 +129,17 @@ static CGFloat const kDefaultTabBarFontSize = 14;
 
 #pragma mark - UIToolbar
 
++ (void)customizeToolbarTintColor:(UIColor *)tintColor barTintColor:(UIColor *)barTintColor {
+    [self customizeToolbarTintColor:tintColor];
+    [self customizeToolbarBarTintColor:barTintColor];
+}
+
 + (void)customizeToolbarTintColor:(UIColor *)tintColor {
     [[UIToolbar appearance] setTintColor:tintColor];
+}
+
++ (void)customizeToolbarBarTintColor:(UIColor *)barTintColor {
+    [[UIToolbar appearance] setBarTintColor:barTintColor];
 }
 
 
