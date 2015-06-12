@@ -3,6 +3,9 @@ MAThemeKit
 
 MAThemeKit provides iOS developers the ability to create a coherent color theme throughout their entire application using a single line of code, removing the need to mess with the dozens of UIAppearance proxies for each UI component.
 
+![demo](Screenshots/screenshot1.png)
+![demo](Screenshots/screenshot2.png)
+
 
 Usage
 =====
@@ -24,10 +27,6 @@ In one simple line of code, your entire application will be set to your new beau
 ```js
 [MAThemeKit setupThemeWithPrimaryColor:[MAThemeKit colorWithR:0 G:184 B:156] secondaryColor:[UIColor whiteColor] fontName:@"HelveticaNeue-Light" lightStatusBar:YES];
 ```
-
-![demo](Screenshots/screenshot1.png)
-![demo](Screenshots/screenshot2.png)
-
 
 There are two convenience methods provided by MAThemeKit to create UIColor objects from the RGB values or hex strings, for quick and easy creation of color information you might get from photoshop's color picker.
 
