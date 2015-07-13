@@ -13,7 +13,7 @@ Usage
 The easiest way to incorporate MAThemeKit into your project is using CocoaPods. Add the following to your podfile and run `pod install`:
 
 ```
-pod 'MAThemeKit', :git => 'https://github.com/mamaral/MAThemeKit'
+pod 'MAThemeKit'
 ```
 
 Manual
