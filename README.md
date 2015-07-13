@@ -24,13 +24,13 @@ Drop the MAThemeKit.h/m files into your project, import the header into your App
 In one simple line of code, your entire application will be set to your new beautiful theme!
 
 
-```js
+```objective-c
 [MAThemeKit setupThemeWithPrimaryColor:[MAThemeKit colorWithR:0 G:184 B:156] secondaryColor:[UIColor whiteColor] fontName:@"HelveticaNeue-Light" lightStatusBar:YES];
 ```
 
 There are two convenience methods provided by MAThemeKit to create UIColor objects from the RGB values or hex strings, for quick and easy creation of color information you might get from photoshop's color picker.
 
-```js
+```objective-c
 // Use the rgb values BEFORE they are divided by 255.0, like you would see in photoshop's color picker
 UIColor *colorWithRGB = [MAThemeKit colorWithR:0 G:184 B:156]
 
