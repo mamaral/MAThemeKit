@@ -21,82 +21,83 @@ https://gist.github.com/mattt/5135521
 
 #pragma mark - Master Theme
 
-+ (void)setupThemeWithPrimaryColor:(UIColor *)primaryColor secondaryColor:(UIColor *)secondaryColor fontName:(NSString *)fontName lightStatusBar:(BOOL)lightStatusBar;
++ (void)setupThemeWithPrimaryColor:(nonnull UIColor *)primaryColor secondaryColor:(nonnull
+ UIColor *)secondaryColor fontName:(nullable NSString *)fontName lightStatusBar:(BOOL)lightStatusBar;
 
 
 #pragma mark - UINavigationBar
 
-+ (void)customizeNavigationBarColor:(UIColor *)barColor textColor:(UIColor *)textColor buttonColor:(UIColor *)buttonColor;
-+ (void)customizeNavigationBarColor:(UIColor *)barColor textColor:(UIColor *)textColor fontName:(NSString *)fontName fontSize:(CGFloat)fontSize buttonColor:(UIColor *)buttonColor;
++ (void)customizeNavigationBarColor:(nonnull UIColor *)barColor textColor:(nonnull UIColor *)textColor buttonColor:(nonnull UIColor *)buttonColor;
++ (void)customizeNavigationBarColor:(nonnull UIColor *)barColor textColor:(nonnull UIColor *)textColor fontName:(nonnull NSString *)fontName fontSize:(CGFloat)fontSize buttonColor:(nonnull UIColor *)buttonColor;
 
 
 #pragma mark - UIBarButtonItem
 
-+ (void)customizeNavigationBarButtonColor:(UIColor *)buttonColor;
++ (void)customizeNavigationBarButtonColor:(nonnull UIColor *)buttonColor;
 
 
 #pragma mark - UITabBar
 
-+ (void)customizeTabBarColor:(UIColor *)barColor textColor:(UIColor *)textColor;
-+ (void)customizeTabBarColor:(UIColor *)barColor textColor:(UIColor *)textColor fontName:(NSString *)fontName fontSize:(CGFloat)fontSize;
++ (void)customizeTabBarColor:(nonnull UIColor *)barColor textColor:(nonnull UIColor *)textColor;
++ (void)customizeTabBarColor:(nonnull UIColor *)barColor textColor:(nonnull UIColor *)textColor fontName:(nonnull NSString *)fontName fontSize:(CGFloat)fontSize;
 
 
 #pragma mark - UIButton
 
-+ (void)customizeButtonColor:(UIColor *)buttonColor;
++ (void)customizeButtonColor:(nonnull UIColor *)buttonColor;
 
 
 #pragma mark - UISwitch
 
-+ (void)customizeSwitchOnColor:(UIColor *)switchOnColor;
++ (void)customizeSwitchOnColor:(nonnull UIColor *)switchOnColor;
 
 
 #pragma mark - UISearchBar
 
-+ (void)customizeSearchBarColor:(UIColor *)barColor buttonTintColor:(UIColor *)buttonTintColor;
++ (void)customizeSearchBarColor:(nonnull UIColor *)barColor buttonTintColor:(nonnull UIColor *)buttonTintColor;
 
 
 #pragma mark - UIActivityIndicator
 
-+ (void)customizeActivityIndicatorColor:(UIColor *)color;
++ (void)customizeActivityIndicatorColor:(nonnull UIColor *)color;
 
 
 #pragma mark - UISegmentedControl
 
-+ (void)customizeSegmentedControlWithMainColor:(UIColor *)mainColor secondaryColor:(UIColor *)secondaryColor;
++ (void)customizeSegmentedControlWithMainColor:(nonnull UIColor *)mainColor secondaryColor:(nonnull UIColor *)secondaryColor;
 
 
 #pragma mark - UISlider
 
-+ (void)customizeSliderColor:(UIColor *)sliderColor;
++ (void)customizeSliderColor:(nonnull UIColor *)sliderColor;
 
 
 #pragma mark - UIToolbar
 
-+ (void)customizeToolbarTintColor:(UIColor *)tintColor barTintColor:(UIColor *)barTintColor;
-+ (void)customizeToolbarTintColor:(UIColor *)tintColor;
-+ (void)customizeToolbarBarTintColor:(UIColor *)barTintColor;
++ (void)customizeToolbarTintColor:(nonnull UIColor *)tintColor barTintColor:(nonnull UIColor *)barTintColor;
++ (void)customizeToolbarTintColor:(nonnull UIColor *)tintColor;
++ (void)customizeToolbarBarTintColor:(nonnull UIColor *)barTintColor;
 
 
 #pragma mark - UIPageControl
 
-+ (void)customizePageControlCurrentPageColor:(UIColor *)mainColor;
++ (void)customizePageControlCurrentPageColor:(nonnull UIColor *)mainColor;
 
 #pragma mark - UILabel
 
-+ (void)customizeLabelColor:(UIColor *)textColor fontName:(NSString *)fontName fontSize:(CGFloat)fontSize;
++ (void)customizeLabelColor:(nonnull UIColor *)textColor fontName:(nullable NSString *)fontName fontSize:(CGFloat)fontSize;
 
 #pragma mark - UITableView
 
-+ (void)customizeTableViewColor:(UIColor *)mainColor secondaryColor:(UIColor *)secondaryColor;
++ (void)customizeTableViewColor:(nonnull UIColor *)mainColor secondaryColor:(nonnull UIColor *)secondaryColor;
 
 #pragma mark - UIBarButtonItem
 
-+ (void)customizeBarButtonItemColor:(UIColor *)mainColor fontName:(NSString *)fontName fontSize:(CGFloat)fontSize;
++ (void)customizeBarButtonItemColor:(nonnull UIColor *)mainColor fontName:(nullable NSString *)fontName fontSize:(CGFloat)fontSize;
 
 #pragma mark - Color utilities
 
-+ (UIColor *)colorWithR:(CGFloat)r G:(CGFloat)g B:(CGFloat)b;
-+ (UIColor *)colorWithHexString:(NSString *)hex;
++ (nonnull UIColor *)colorWithR:(CGFloat)r G:(CGFloat)g B:(CGFloat)b;
++ (nonnull UIColor *)colorWithHexString:(nonnull NSString *)hex;
 
 @end
