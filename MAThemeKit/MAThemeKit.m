@@ -19,9 +19,15 @@ static CGFloat const kDefaultTabBarFontSize = 14;
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     }
     
-    [self customizeNavigationBarColor:primaryColor textColor:secondaryColor fontName:fontName fontSize:kDefaultNavigationBarFontSize buttonColor:secondaryColor];
+    if (!fontName) {
+        [self customizeNavigationBarColor:primaryColor textColor:secondaryColor buttonColor:secondaryColor];
+        [self customizeTabBarColor:primaryColor textColor:secondaryColor];
+    } else {
+        [self customizeNavigationBarColor:primaryColor textColor:secondaryColor fontName:fontName fontSize:kDefaultNavigationBarFontSize buttonColor:secondaryColor];
+        [self customizeTabBarColor:primaryColor textColor:secondaryColor fontName:fontName fontSize:kDefaultTabBarFontSize];
+    }
+    
     [self customizeNavigationBarButtonColor:secondaryColor];
-    [self customizeTabBarColor:primaryColor textColor:secondaryColor fontName:fontName fontSize:kDefaultTabBarFontSize];
     [self customizeSwitchOnColor:primaryColor];
     [self customizeSearchBarColor:primaryColor buttonTintColor:secondaryColor];
     [self customizeActivityIndicatorColor:primaryColor];
@@ -176,9 +182,16 @@ static CGFloat const kDefaultTabBarFontSize = 14;
 
 + (void)customizeBarButtonItemColor:(UIColor *)mainColor fontName:(NSString *)fontName fontSize:(CGFloat)fontSize {
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{
-                                                           NSFontAttributeName: [UIFont fontWithName:fontName size:fontSize],
                                                            NSForegroundColorAttributeName: mainColor
                                                            } forState:UIControlStateNormal];
+    
+    UIFont *font = [UIFont fontWithName:fontName size:fontSize];
+    
+    if (fontName) {
+        [[UIBarButtonItem appearance] setTitleTextAttributes:@{
+                                                           NSFontAttributeName: font,
+                                                           } forState:UIControlStateNormal];
+    }
 }
 
 
