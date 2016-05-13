@@ -123,7 +123,8 @@ static CGFloat const kDefaultTabBarFontSize = 14;
 #pragma mark - UISegmentedControl
 
 + (void)customizeSegmentedControlWithMainColor:(UIColor *)mainColor secondaryColor:(UIColor *)secondaryColor {
-    [[UISegmentedControl appearance] setTintColor:mainColor];
+    [[UISegmentedControl appearance] setTintColor:secondaryColor];
+    [[UISegmentedControl appearance] setBackgroundColor:mainColor];
 }
 
 
