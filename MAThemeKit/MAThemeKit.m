@@ -16,6 +16,15 @@ static CGFloat const kDefaultTabBarFontSize = 14;
 
 + (void)setupThemeWithPrimaryColor:(UIColor *)primaryColor secondaryColor:(UIColor *)secondaryColor fontName:(NSString *)fontName lightStatusBar:(BOOL)lightStatusBar {
     if (lightStatusBar) {
+        /*
+         This has been deprecated in favor or setting statusBarStyle per ViewController level
+         eg:    [self preferredStatusBarStyle: UIStatusBarStyleLightContent];
+         
+         http://stackoverflow.com/questions/32067174/setstatusbarhidden-deprecated-but-only-thing-that-works
+         
+         supressing the warning for now
+         */
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     }
     
@@ -67,7 +76,7 @@ static CGFloat const kDefaultTabBarFontSize = 14;
 #pragma mark - UIBarButtonItem
 
 + (void)customizeNavigationBarButtonColor:(UIColor *)buttonColor {
-    [[UIButton appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleColor:buttonColor forState:UIControlStateNormal];
+    [[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UINavigationBar class]]] setTitleColor:buttonColor forState:UIControlStateNormal];
 }
 
 
@@ -109,7 +118,7 @@ static CGFloat const kDefaultTabBarFontSize = 14;
 + (void)customizeSearchBarColor:(UIColor *)barColor buttonTintColor:(UIColor *)buttonTintColor {
     [[UISearchBar appearance] setBarTintColor:barColor];
     [[UISearchBar appearance] setTintColor:barColor];
-        [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitleTextAttributes:@{NSForegroundColorAttributeName: buttonTintColor} forState:UIControlStateNormal];
+    [[UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]] setTitleTextAttributes:@{NSForegroundColorAttributeName: buttonTintColor} forState:UIControlStateNormal];
 }
 
 
